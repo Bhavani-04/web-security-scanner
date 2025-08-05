@@ -23,6 +23,6 @@ jobs:
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v1.2
-        with:
-          host: 'http://192.168.150.1:9000'
-          login: ${{ secrets.SONAR_TOKEN }}
+        env:
+          SONAR_HOST_URL: http:// 192.168.150.1:9000    # Replace with your IP
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
