@@ -1,0 +1,6 @@
+projectKey=web-security-scanner
+serverUrl=http://localhost:9000
+serverVersion=25.7.0.110598
+dashboardUrl=http://localhost:9000/dashboard?id=web-security-scanner
+ceTaskId=62ea717b-6f62-45e8-86c8-d22993f1cea8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=62ea717b-6f62-45e8-86c8-d22993f1cea8

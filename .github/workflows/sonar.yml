@@ -1,0 +1,28 @@
+name: SonarQube Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  sonarQubeScan:
+    name: Run SonarQube Scanner
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v1.2
+        with:
+          host: 'http://192.168.150.1:9000'
+          login: ${{ secrets.SONAR_TOKEN }}
